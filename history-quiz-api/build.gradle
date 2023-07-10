@@ -5,10 +5,10 @@ plugins {
 }
 
 group project.group
-version project.version
+version = '0.0.3'
 
 repositories {
-    mavenLocal()
+    mavenCentral()
 }
 
 dependencies {
@@ -62,3 +62,20 @@ openApiGenerate {
 
 tasks.openApiGenerate.dependsOn tasks.openApiValidate
 tasks.compileJava.dependsOn tasks.openApiGenerate
+
+
+tasks.register('printProjectName') {
+    println ">> " + project.name
+    println ">> " + project.version
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId 'com.adam.stan'
+            artifactId project.name
+            version project.version
+            from components.java
+        }
+    }
+}
