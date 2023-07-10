@@ -1,0 +1,71 @@
+openapi: 3.0.3
+info:
+  title: History Quiz
+  version: "1"
+paths:
+  /api/v1/quiz:
+    get:
+      summary: Create a quiz - list of questions with answers
+      description: creates quiz
+      operationId: getQuiz
+      tags:
+        - quiz
+      parameters:
+        - name: numberOfQuestions
+          in: query
+          required: true
+          schema:
+            type: integer
+          description: the number of questions in the quiz
+        - name: numberOfAnswers
+          in: query
+          required: false
+          schema:
+            type: integer
+          description: the number of available answers to choose
+        - name: categories
+          in: query
+          required: false
+          schema:
+            type: array
+            items:
+              type: string
+      responses:
+        '200':
+          description: Quiz were generated
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "Question"
+  /api/v1/categories:
+    get:
+      summary: Get all categories
+      description: Returns a list of all categories
+      operationId: getCategories
+      tags:
+        - Category
+      responses:
+        '200':
+          description: All categories
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+
+components:
+  schemas:
+    Question:
+      type: object
+      properties:
+        text:
+          type: string
+        correctAnswer:
+          type: string
+        otherAnswers:
+          type: array
+          items:
+            type: string
