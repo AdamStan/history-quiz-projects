@@ -16,7 +16,7 @@ import java.util.List;
 public class Answer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String content;
     @Enumerated(EnumType.STRING)
     private AnswerType type;

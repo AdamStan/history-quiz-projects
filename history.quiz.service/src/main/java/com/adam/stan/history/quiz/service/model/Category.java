@@ -13,7 +13,7 @@ import java.util.List;
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String period;
     private String details;
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
