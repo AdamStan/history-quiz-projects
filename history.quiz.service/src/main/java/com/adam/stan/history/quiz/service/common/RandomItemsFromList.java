@@ -13,7 +13,7 @@ public class RandomItemsFromList<E> {
 
     public RandomItemsFromList(int numberOfElements, List<E> objects) {
         numberOfItems = numberOfElements;
-        elements = objects;
+        elements = new ArrayList<>(objects);
     }
 
     public List<E> getRandomItems() {

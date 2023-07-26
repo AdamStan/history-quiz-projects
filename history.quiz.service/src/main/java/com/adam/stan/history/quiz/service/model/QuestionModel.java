@@ -1,13 +1,15 @@
 package com.adam.stan.history.quiz.service.model;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = "questions")
 @Getter
 @Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class QuestionModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

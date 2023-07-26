@@ -13,7 +13,7 @@ public class NotEnoughItemsOnListException extends RuntimeException {
     private final int howManyItemsToChoose;
 
     public NotEnoughItemsOnListException(String message, int itemsOnList, int howManyItemsToChoose) {
-        super(message + String.format(" There is %d elements, but we need %d elements", itemsOnList, howManyItemsToChoose));
+        super(message + String.format(" There is %d elements, but we need at least %d elements", itemsOnList, howManyItemsToChoose));
         this.itemsOnList = itemsOnList;
         this.howManyItemsToChoose = howManyItemsToChoose;
     }

@@ -1,17 +1,18 @@
 package com.adam.stan.history.quiz.service.model;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
-@Entity(name = "answers")
+@Entity
+@Table(name = "answers", uniqueConstraints = {
+        @UniqueConstraint(name = "contentAndTypeAreUnique", columnNames = {"type", "content"})
+})
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor
 public class Answer {
     @Id
