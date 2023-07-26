@@ -3,10 +3,12 @@ package com.adam.stan.history.quiz.service.service;
 import com.adam.stan.history.quiz.api.v1.model.Question;
 import com.adam.stan.history.quiz.service.common.RandomItemsFromList;
 import com.adam.stan.history.quiz.service.model.QuestionModel;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class QuizPreparationImpl implements QuizPreparation {
     private final QuestionPreparation questionPreparation;
 
