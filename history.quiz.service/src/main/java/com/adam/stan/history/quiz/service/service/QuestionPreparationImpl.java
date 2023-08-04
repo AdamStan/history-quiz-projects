@@ -4,6 +4,7 @@ import com.adam.stan.history.quiz.api.v1.model.Question;
 import com.adam.stan.history.quiz.service.common.RandomItemsFromList;
 import com.adam.stan.history.quiz.service.model.Answer;
 import com.adam.stan.history.quiz.service.model.AnswerType;
+import com.adam.stan.history.quiz.service.model.Category;
 import com.adam.stan.history.quiz.service.model.QuestionModel;
 import com.adam.stan.history.quiz.service.repository.AnswerRepository;
 import org.springframework.stereotype.Component;
@@ -27,9 +28,8 @@ public class QuestionPreparationImpl implements QuestionPreparation {
         jsonObject.setText(question.getContent());
         jsonObject.setCorrectAnswer(question.getCorrectAnswer().getContent());
         AnswerType type = question.getCorrectAnswer().getType();
-        // TODO add category to search
-        // Category cat = question.getCorrectAnswer().getCategory();
-        List<Answer> answers = answerRepository.findByAnswerType(type);
+        Category cat = question.getCorrectAnswer().getCategory();
+        List<Answer> answers = answerRepository.findByTypeAndCategory_Id(type, cat.getId());
 
         RandomItemsFromList<Answer> itemsGenerator = new RandomItemsFromList<>(amountOfChoices, answers);
         List<Answer> chosenAnswers = itemsGenerator.getRandomItems();

@@ -5,4 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface QuestionModelRepository extends JpaRepository<QuestionModel, Long> {
 
+    QuestionModel findByContent(String content);
 }
