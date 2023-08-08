@@ -55,6 +55,32 @@ paths:
                 type: array
                 items:
                   type: string
+  /admin/v1/questions/add:
+    post:
+      tags:
+        - QuestionManagement
+      summary: Add questions to the database
+      description: Add questions to the database - with a json format
+      operationId: addQuestions
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "QuestionDB"
+      responses:
+        '200':
+          description: Questions added to the database
+        '406':
+          description: One or more question cannot be added
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "ErrorDB"
 
 components:
   schemas:
@@ -69,3 +95,23 @@ components:
           type: array
           items:
             type: string
+    QuestionDB:
+      type: object
+      properties:
+        questionText:
+          type: string
+        correctAnswer:
+          type: string
+        answerType:
+          type: string
+        period:
+          type: string
+        details:
+          type: string
+    ErrorDB:
+      type: object
+      properties:
+        questionText:
+          type: string
+        reason:
+          type: string
