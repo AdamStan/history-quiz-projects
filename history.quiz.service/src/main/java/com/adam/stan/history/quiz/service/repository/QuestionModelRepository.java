@@ -9,6 +9,6 @@ public interface QuestionModelRepository extends JpaRepository<QuestionModel, Lo
 
     QuestionModel findByContent(String content);
 
-    Optional<QuestionModel> findByContentAndAnswer_Id(String content, Long answerId);
+    Optional<QuestionModel> findByContentAndCorrectAnswer_Id(String content, Long answerId);
 
 }

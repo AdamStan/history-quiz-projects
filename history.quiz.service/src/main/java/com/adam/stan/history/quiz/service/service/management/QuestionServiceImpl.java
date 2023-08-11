@@ -10,6 +10,7 @@ import com.adam.stan.history.quiz.service.model.QuestionModel;
 import com.adam.stan.history.quiz.service.repository.AnswerRepository;
 import com.adam.stan.history.quiz.service.repository.CategoryRepository;
 import com.adam.stan.history.quiz.service.repository.QuestionModelRepository;
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -31,8 +32,6 @@ public class QuestionServiceImpl implements QuestionService {
                         .period(questionDB.getPeriod())
                         .details(questionDB.getDetails())
                 .build()));
-        questionDB.getAnswerType();
-        questionDB.getCorrectAnswer();
 
         AnswerType type = AnswerType.from(questionDB.getAnswerType());
         if (type == null) {
@@ -48,7 +47,7 @@ public class QuestionServiceImpl implements QuestionService {
                         .build()
         ));
 
-        Optional<QuestionModel> question = questionModelRepository.findByContentAndAnswer_Id(questionDB.getQuestionText(), ans1.getId());
+        Optional<QuestionModel> question = questionModelRepository.findByContentAndCorrectAnswer_Id(questionDB.getQuestionText(), ans1.getId());
         if (question.isPresent()) {
             return new ErrorDB().questionText(questionDB.getQuestionText()).reason("Such question exists in the database!");
         }
@@ -63,6 +62,7 @@ public class QuestionServiceImpl implements QuestionService {
     }
 
     @Override
+    @Transactional(rollbackOn = NotAddedQuestionsException.class)
     public void addQuestions(List<QuestionDB> questions) {
         List<ErrorDB> errors = new ArrayList<>();
         for (QuestionDB qdb : questions) {
