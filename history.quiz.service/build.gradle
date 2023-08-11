@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'groovy'
+    id 'idea'
     id 'org.springframework.boot' version '3.1.1'
     id 'io.spring.dependency-management' version '1.1.0'
 }
@@ -9,12 +10,30 @@ group = 'com.adam.stan'
 version = '0.0.1-SNAPSHOT'
 
 java {
+    withSourcesJar()
     sourceCompatibility = JavaVersion.VERSION_17
 }
 
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
+    }
+}
+
+sourceSets {
+    integration {
+        groovy.srcDirs = ["src/integration/groovy"]
+        resources.srcDirs "src/integration/resources"
+        output.resourcesDir = file("build/classes/integrationTest")
+        compileClasspath += sourceSets.test.runtimeClasspath
+        runtimeClasspath += sourceSets.integration.compileClasspath
+    }
+}
+
+idea {
+    module {
+        sourceDirs += project.sourceSets.integration.groovy.srcDirs
+        sourceDirs += project.sourceSets.integration.resources.srcDirs
     }
 }
 
@@ -41,6 +60,18 @@ dependencies {
     runtimeOnly 'com.h2database:h2'
 }
 
-tasks.named('test') {
+test {
     useJUnitPlatform()
+    group = "verification"
 }
+
+tasks.register('integrationTest', Test) {
+    description = "Run all integration tests"
+    group = "verification"
+    useJUnitPlatform()
+    testClassesDirs = sourceSets.integration.output.classesDirs
+    classpath = sourceSets.integration.runtimeClasspath
+}
+
+integrationTest.dependsOn integrationClasses
+check.dependsOn integrationTest

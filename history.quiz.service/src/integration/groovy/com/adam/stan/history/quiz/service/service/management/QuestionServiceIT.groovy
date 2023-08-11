@@ -1,27 +1,15 @@
-package com.adam.stan.history.quiz.service.service.management
+package com.adam.stan.history.quiz.service
 
 import com.adam.stan.history.quiz.api.v1.model.QuestionDB
 import com.adam.stan.history.quiz.service.common.exceptions.NotAddedQuestionsException
-import com.adam.stan.history.quiz.service.common.exceptions.NotEnoughItemsOnListException
 import com.adam.stan.history.quiz.service.model.Answer
 import com.adam.stan.history.quiz.service.model.AnswerType
 import com.adam.stan.history.quiz.service.model.Category
 import com.adam.stan.history.quiz.service.model.QuestionModel
-import com.adam.stan.history.quiz.service.repository.AnswerRepository
-import com.adam.stan.history.quiz.service.repository.CategoryRepository
-import com.adam.stan.history.quiz.service.repository.QuestionModelRepository
+import com.adam.stan.history.quiz.service.service.management.QuestionServiceImpl
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.context.SpringBootTest
-import spock.lang.Specification
 
-@SpringBootTest
-class QuestionServiceIT extends Specification {
-    @Autowired
-    private AnswerRepository answerRepository
-    @Autowired
-    private CategoryRepository categoryRepository
-    @Autowired
-    private QuestionModelRepository questionRepository
+class QuestionServiceIT extends AbstractIT {
     @Autowired
     private QuestionServiceImpl questionService
 
@@ -44,12 +32,6 @@ class QuestionServiceIT extends Specification {
                 .content("What year did the Battle of Cannae take place?")
                 .build()
         questionRepository.save(question)
-    }
-
-    def cleanup() {
-        questionRepository.deleteAll()
-        answerRepository.deleteAll()
-        categoryRepository.deleteAll()
     }
 
     def "add question - existing category"() {

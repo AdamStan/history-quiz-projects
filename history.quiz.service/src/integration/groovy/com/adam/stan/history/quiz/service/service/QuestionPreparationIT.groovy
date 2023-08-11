@@ -1,24 +1,13 @@
-package com.adam.stan.history.quiz.service.service
+package com.adam.stan.history.quiz.service
 
 import com.adam.stan.history.quiz.service.model.Answer
 import com.adam.stan.history.quiz.service.model.AnswerType
 import com.adam.stan.history.quiz.service.model.Category
 import com.adam.stan.history.quiz.service.model.QuestionModel
-import com.adam.stan.history.quiz.service.repository.AnswerRepository
-import com.adam.stan.history.quiz.service.repository.CategoryRepository
-import com.adam.stan.history.quiz.service.repository.QuestionModelRepository
+import com.adam.stan.history.quiz.service.service.QuestionPreparationImpl
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.context.SpringBootTest
-import spock.lang.Specification
 
-@SpringBootTest
-class QuestionPreparationIT extends Specification {
-    @Autowired
-    private AnswerRepository answerRepository
-    @Autowired
-    private CategoryRepository categoryRepository
-    @Autowired
-    private QuestionModelRepository questionRepository;
+class QuestionPreparationIT extends AbstractIT {
     @Autowired
     private QuestionPreparationImpl questionPreparation
 
@@ -46,12 +35,6 @@ class QuestionPreparationIT extends Specification {
         answerRepository.save(Answer.builder().content("264 bc").type(AnswerType.YEAR).category(cat1).build())
         answerRepository.save(Answer.builder().content("202 bc").type(AnswerType.YEAR).category(cat1).build())
         answerRepository.save(Answer.builder().content("71 bc").type(AnswerType.YEAR).category(cat1).build())
-    }
-
-    def cleanup() {
-        questionRepository.deleteAll()
-        answerRepository.deleteAll()
-        categoryRepository.deleteAll()
     }
 
     def "test generating question with database"() {
