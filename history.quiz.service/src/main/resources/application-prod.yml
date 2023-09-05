@@ -5,7 +5,8 @@ spring:
       ddl-auto: create-drop
     properties:
       hibernate.jdbc.lob.non_contextual_creation: true
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
   datasource:
-    url: jdbc:postgresql://localhost:5433/his_db_2_PL
+    url: jdbc:postgresql://localhost:5432/his_database_pl #db name for postgres is in lower case
     username: hist_user2
     password: ${PASSWORD_DB}

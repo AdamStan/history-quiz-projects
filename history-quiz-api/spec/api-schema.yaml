@@ -71,8 +71,14 @@ paths:
               items:
                 $ref: "QuestionDB"
       responses:
-        '200':
+        '202':
           description: Questions added to the database
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "ErrorDB"
         '406':
           description: One or more question cannot be added
           content:

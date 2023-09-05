@@ -6,9 +6,7 @@ import lombok.*;
 import java.util.List;
 
 @Entity
-@Table(name = "answers", uniqueConstraints = {
-        @UniqueConstraint(name = "contentAndTypeAreUnique", columnNames = {"type", "content"})
-})
+@Table(name = "answers")
 @Getter
 @Setter
 @Builder

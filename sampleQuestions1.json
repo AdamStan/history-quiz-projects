@@ -1,0 +1,247 @@
+[
+    {
+        "questionText": "W których latach toczyła się pierwsza wojna punicka?",
+        "correctAnswer": "264 p.n.e. – 241 p.n.e.",
+        "answerType": "YEAR_PERIOD",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "W których latach toczyła się druga wojna punicka?",
+        "correctAnswer": "218 p.n.e. – 201 p.n.e.",
+        "answerType": "YEAR_PERIOD",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "W których latach toczyła się trzecia wojna punicka?",
+        "correctAnswer": "149 p.n.e. – 146 p.n.e.",
+        "answerType": "YEAR_PERIOD",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "W którym roku odbyła się bitwa pod Messaną?",
+        "correctAnswer": "264 p.n.e.",
+        "answerType": "YEAR",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "W którym roku odbyła się bitwa pod Kannami?",
+        "correctAnswer": "216 p.n.e.",
+        "answerType": "YEAR",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "W którym roku odbyła się bitwa pod Zamą?",
+        "correctAnswer": "202 p.n.e.",
+        "answerType": "YEAR",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "W którym roku odbyła się bitwa pod Maratonem?",
+        "correctAnswer": "490 p.n.e.",
+        "answerType": "YEAR",
+        "period": "starożytność",
+        "details": "starożytna grecja"
+    },
+    {
+        "questionText": "W których latach toczyła się druga wojna perska?",
+        "correctAnswer": "480 p.n.e. – 449 p.n.e.",
+        "answerType": "YEAR_PERIOD",
+        "period": "starożytność",
+        "details": "starożytna grecja"
+    },
+    {
+        "questionText": "W którym roku odbyła się bitwa pod Cheroneą?",
+        "correctAnswer": "338 p.n.e.",
+        "answerType": "YEAR",
+        "period": "starożytność",
+        "details": "starożytna grecja"
+    },
+    {
+        "questionText": "W którym roku odbyła się bitwa pod Rafią?",
+        "correctAnswer": "217 p.n.e.",
+        "answerType": "YEAR",
+        "period": "starożytność",
+        "details": "okres ptolemejski"
+    },
+    {
+        "questionText": "W których latach panował Antioch III Wielki, władca Seleucydów?",
+        "correctAnswer": "223 p.n.e. – 187 p.n.e.",
+        "answerType": "YEAR_PERIOD",
+        "period": "starożytność",
+        "details": "okres ptolemejski"
+    },
+    {
+        "questionText": "W którym roku odbyła się bitwa nad Jeziorem Trazymeńskim?",
+        "correctAnswer": "217 p.n.e.",
+        "answerType": "YEAR",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "W których latach toczyła się pierwsza wojna macedońska?",
+        "correctAnswer": "215 p.n.e. – 205 p.n.e.",
+        "answerType": "YEAR_PERIOD",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "W których latach toczyła się druga wojna macedońska?",
+        "correctAnswer": "200 p.n.e. - 196 p.n.e.",
+        "answerType": "YEAR_PERIOD",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "W których latach toczyła się trzecia wojna macedońska?",
+        "correctAnswer": "171 p.n.e. - 168 p.n.e.",
+        "answerType": "YEAR_PERIOD",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "W których latach miało miejsce Powstanie Spartkausa?",
+        "correctAnswer": "73 p.n.e. - 71 p.n.e.",
+        "answerType": "YEAR_PERIOD",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "W którym roku odbyła się bitwa nad rzeką Silarus?",
+        "correctAnswer": "71 p.n.e.",
+        "answerType": "YEAR",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "W którym roku Cezar przekroczył Rubikon?",
+        "correctAnswer": "49 p.n.e.",
+        "answerType": "YEAR",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "Kiedy na świat przyszedł Aleksander III Macedoński?",
+        "correctAnswer": "356 p.n.e.",
+        "answerType": "YEAR",
+        "period": "starożytność",
+        "details": "starożytna grecja"
+    },
+    {
+        "questionText": "Okres panowania Aleksandra Wielkiego jako króla Macedonii to:",
+        "correctAnswer": "336 p.n.e. - 323 p.n.e.",
+        "answerType": "YEAR_PERIOD",
+        "period": "starożytność",
+        "details": "starożytna grecja"
+    },
+    {
+        "questionText": "Kto był dowódcą w bitwie pod Kannami po stronie Kartaginy?",
+        "correctAnswer": "Hannibal",
+        "answerType": "PERSON",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "Kto był dowódcą w bitwie pod Zamą po stronie Kartaginy?",
+        "correctAnswer": "Hannibal",
+        "answerType": "PERSON",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "Kto był dowódcą w bitwie pod Maratonem po stronie Greków?",
+        "correctAnswer": "Miltiades",
+        "answerType": "PERSON",
+        "period": "starożytność",
+        "details": "starożytna grecja"
+    },
+    {
+        "questionText": "Kto był dowódcą w bitwie pod Cheroneą po stronie Macedonii?",
+        "correctAnswer": "Filip II Macedoński",
+        "answerType": "PERSON",
+        "period": "starożytność",
+        "details": "starożytna grecja"
+    },
+    {
+        "questionText": "Kto był dowódcą w bitwie pod Rafią po stronie Egipskiej?",
+        "correctAnswer": "Ptolemeusz IV",
+        "answerType": "PERSON",
+        "period": "starożytność",
+        "details": "okres ptolemejski"
+    },
+    {
+        "questionText": "Kto był dowódcą w bitwie nad Jeziorem Trazymeńskim po stronie Kartaginy?",
+        "correctAnswer": "Hannibal",
+        "answerType": "PERSON",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "W którym roku odbyła się bitwa pod Alezją?",
+        "correctAnswer": "52 p.n.e.",
+        "answerType": "YEAR",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "Kto był dowódcą w bitwie pod Alezją po stronie Rzymian?",
+        "correctAnswer": "Juliusz Cezar",
+        "answerType": "PERSON",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "Kto był dowódcą w bitwie pod Alezją po stronie Galii?",
+        "correctAnswer": "Wercyngetoryks",
+        "answerType": "PERSON",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "W którym roku odbyła się bitwa pod Tapsus?",
+        "correctAnswer": "46 p.n.e.",
+        "answerType": "YEAR",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "W których latach panował Juliusz Cezar jako dyktator Rzymu?",
+        "correctAnswer": "49 p.n.e. - 44 p.n.e.",
+        "answerType": "YEAR_PERIOD",
+        "period": "starożytność",
+        "details": "republika rzymska"
+    },
+    {
+        "questionText": "W którym roku stoczono bitwę pod Poitiers?",
+        "correctAnswer": "732 n.e.",
+        "answerType": "YEAR",
+        "period": "średniowiecze",
+        "details": "państwo franków"
+    },
+    {
+        "questionText": "W którym roku stoczono bitwę pod Hastings?",
+        "correctAnswer": "1066 n.e.",
+        "answerType": "YEAR",
+        "period": "średniowiecze",
+        "details": "wikingowie"
+    },
+    {
+        "questionText": "W którym roku odbyła się bitwa pod Badrem?",
+        "correctAnswer": "624 n.e.",
+        "answerType": "YEAR",
+        "period": "średniowiecze",
+        "details": "państwo franków"
+    },
+    {
+        "questionText": "W którym roku odbyła się bitwa pod Fontenoy-en-Puisaye?",
+        "correctAnswer": "841 n.e.",
+        "answerType": "YEAR",
+        "period": "średniowiecze",
+        "details": "państwo franków"
+    }
+]
